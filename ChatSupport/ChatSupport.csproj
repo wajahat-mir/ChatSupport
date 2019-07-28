@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <UserSecretsId>aspnet-ChatSupport-00CC4582-B680-4892-8734-EA196993B269</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20190728202540_InitialMigration.cs" />
+    <Compile Remove="Data\Migrations\20190728202540_InitialMigration.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190728204206_AddDisplayName.cs" />
+    <Compile Remove="Data\Migrations\20190728204206_AddDisplayName.Designer.cs" />
+    <Compile Remove="Data\Migrations\20190728213838_ChatLogic.cs" />
+    <Compile Remove="Data\Migrations\20190728213838_ChatLogic.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.12" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+  </ItemGroup>
+
+</Project>

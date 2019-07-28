@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ChatSupport.ViewModels.ChatViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientUserName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientUserName)
+            </td>
+            <td>
+                @Html.ActionLink("Chats Now", "Index", "ChatNow", new { id = item.ChatId }, null)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
